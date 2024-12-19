@@ -1,0 +1,344 @@
+/* Estilo Global */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7f6;
+    color: #333;
+    line-height: 1.6;
+}
+
+a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+/* Header */
+header {
+    background-color: #2d3a3a; /* Cor original */
+    color: white;
+    padding: 40px 0;
+    text-align: center;
+}
+
+header h1 {
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    margin-top: 10px;
+}
+
+/* Estilo para a imagem no header */
+.foto-perfil {
+    float: right;
+    margin-left: 20px;
+}
+
+.foto-perfil img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    position: absolute;
+    right: 20px;
+    top: 40px;
+    margin-right: 35px;
+}
+
+
+/* Container */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+section {
+    background-color: #f4f4f4;
+    padding: 40px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+}
+
+section:nth-child(even) {
+    background-color: #e0e0e0;
+}
+
+#sobre {
+    background-color: #f0f4f4;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#sobre h2 {
+    font-size: 2.2rem;
+    color: #2d3a3a;
+    margin-bottom: 20px;
+}
+
+#sobre p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #333;
+    margin-bottom: 20px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+#sobre p strong {
+    color: #0066cc;
+}
+
+#formacao {
+    background-color: #fff;
+    padding: 40px 0;
+    text-align: center;
+}
+
+#formacao h2 {
+    font-size: 2.2rem;
+    color: #2d3a3a;
+    margin-bottom: 30px;
+}
+
+/* Organiza as caixas lado a lado */
+.formacao-row {
+    display: flex;
+    justify-content: center; /* Centraliza os itens horizontalmente */
+    gap: 20px; /* Espaço entre as caixas */
+    margin-top: 20px;
+}
+
+.formacao-item {
+    flex: 1 1 45%; /* As caixas ocupam 45% da largura do contêiner */
+    max-width: 400px; /* Define o tamanho máximo */
+    height: 180px; /* Tamanho consistente */
+    display: flex;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #f9f9f9;
+}
+
+/* Ajusta o tamanho da logo */
+.logo-faculdade img {
+    width: 80px;
+    height: 80px;
+    margin-right: 15px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* Estilo do texto */
+.descricao-faculdade h3 {
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+    color: #2d3a3a;
+}
+
+.descricao-faculdade p {
+    font-size: 0.9rem;
+    margin: 0;
+    color: #555;
+}
+
+.descricao-faculdade p strong {
+    color: #0066cc;
+}
+
+#habilidades .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#habilidades h2, #habilidades h3 {
+    text-align: left;
+    margin-bottom: 10px;
+}
+
+.habilidades-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 15px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.habilidades-grid li {
+    display: flex;
+    align-items: center;
+    background: #f5f5f5;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.habilidades-grid li:hover {
+    background: #e0e0e0;
+}
+
+#habilidades img {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+    vertical-align: middle;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* Novo estilo para experiência acadêmica */
+#experiencia .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+#experiencia h2, #experiencia h3 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.lista {
+    transform-style: preserve-3d;
+    perspective: 400px;
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+.lista li {
+    width: 23%;
+    height: auto;
+    padding: 15px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    border-radius: 6px;
+    background: #dbdbdb;
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: transform 0.5s ease, opacity 0.5s ease, background-color 0.5s ease;
+}
+
+.lista:hover li {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.lista li:first-child {
+    opacity: 1;
+    transform: translateX(0);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.lista li:nth-child(2), .lista li:nth-child(3), .lista li:nth-child(4) {
+    opacity: 0;
+    transform: translateX(-150px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.lista:hover li:nth-child(2),
+.lista:hover li:nth-child(3),
+.lista:hover li:nth-child(4) {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .container {
+        width: 95%;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    h2 {
+        font-size: 1.6rem;
+    }
+
+    h3 {
+        font-size: 1.2rem;
+    }
+}
+
+/* Botão de rolagem para cima */
+#scrollTopBtn {
+    position: fixed;
+    bottom: 30px;
+    right: 30px;
+    background-color: #00aaff; /* Novo azul vibrante */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    padding: 0;
+    font-size: 1.6rem;
+    text-align: center;
+    line-height: 40px;
+    cursor: pointer;
+    display: none;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+}
+
+#scrollTopBtn:hover {
+    background-color: #0088cc; /* Cor mais escura ao passar o mouse */
+    transform: scale(1.1);
+}
+
+#scrollTopBtn:focus {
+    outline: none;
+}
+
+/* Responsividade - ajuste da seta em telas menores */
+@media (max-width: 768px) {
+    #scrollTopBtn {
+        right: 15px;
+        bottom: 15px;
+        padding: 12px;
+        font-size: 1.8rem;
+    }
+}
+
+/* Footer */
+footer {
+    background-color: #2d3a3a; /* Cor original */
+    color: white;
+    padding: 20px 0;
+    text-align: center;
+    margin-top: 40px;
+}
+
+footer p {
+    font-size: 1rem;
+}
