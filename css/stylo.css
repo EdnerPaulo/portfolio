@@ -55,8 +55,11 @@ header p {
     right: 20px;
     top: 40px;
     margin-right: 35px;
+    filter: drop-shadow(10px 10px 10px orange);
 }
-
+.foto-perfil img:hover {
+    transform: scale(1.4);
+}
 
 /* Container */
 .container {
@@ -265,6 +268,10 @@ section:nth-child(even) {
     opacity: 1;
     transform: translateX(0);
 }
+.lista li img:hover {
+    transform: scale(1.6);
+}
+
 
 /* Responsividade */
 @media (max-width: 768px) {
